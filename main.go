@@ -96,7 +96,6 @@ func UserHandler(w http.ResponseWriter, r *http.Request) {
 		&CloudCastsData.Data[0].UpdatedTime,
 	)
 
-	// @todo loop through CloudCastsData.Data, adding items to the podcast
 	for i := range CloudCastsData.Data {
 		post := CloudCastsData.Data[i]
 
@@ -125,7 +124,7 @@ func UserHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	port := "8080" // @todo take this from an environment variable
+	port := "8348" // @todo take this from an environment variable
 
 	r := mux.NewRouter()
 	// @todo serve a homepage
